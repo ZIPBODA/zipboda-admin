@@ -143,11 +143,11 @@
 
 | ID | 슬롯 | 값 |
 |----|------|-----|
-| P1 | 대상 스택 | React + **Vite (SPA)** / TypeScript / Vite / 유틸리티 CSS+디자인토큰 / TanStack Query+전역스토어 / fetch / 차트 라이브러리 |
+| P1 | 대상 스택 | React + **Next.js(App Router)** / TypeScript / Next 빌드 / **Tailwind**+디자인토큰 / TanStack Query+전역스토어 / fetch / 차트 라이브러리 (web과 동일 스택) |
 | P2 | 범위 | 활성 `src/**/*.{ts,tsx}` · 비활성 `dist/`·`build/`·`.next/`·`.expo/` |
-| P3 | 빌드·렌더 모드 | **SPA(클라이언트 렌더)** — SEO 불필요. dev/운영 빌드 분기 |
+| P3 | 빌드·렌더 모드 | **Next.js(App Router)** — 관리자는 SEO 불필요라 대부분 CSR 위주. dev/운영 빌드 분기 |
 | P4 | 경로 별칭 | `@/*` (내부) · `@zipboda/shared` (web·app 공유 패키지) |
-| P5 | 프레임워크 관용구 | Vite lazy + `<Suspense>` · `react-hooks/exhaustive-deps` · 함수형 컴포넌트만 |
+| P5 | 프레임워크 관용구 | `next/dynamic`+`<Suspense>` · `react-hooks/exhaustive-deps` · 함수형 컴포넌트만 |
 | P6 | 상태 관리 | 전역 스토어 + URL 쿼리 파라미터 · props drilling 3단계 초과 시 분리 |
 | P7 | 디자인 토큰 | brand `#FFBA17` · neutral `#111111~#F3F4F6` · semantic 정보 `#2B7FFF`/성공 `#00BC7D`/경고 `#F59E0B`/오류 `#FF6467` · social Kakao `#FEE500`/Naver `#03C75A` · Pretendard, weight 400–900 · 임의 hex/arbitrary spacing 금지 |
 | P8 | 공용 컴포넌트 | `shared/ui` (Button/Input/Badge/Modal/Table/Tabs/EmptyState 등) — 인라인 재구현 금지 |
