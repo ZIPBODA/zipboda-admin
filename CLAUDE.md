@@ -3,7 +3,7 @@
 집보다 **운영 관리자 콘솔**. 청약 공고·데이터 연계·평면도/3D 자산·콘텐츠·회원·커뮤니티·알림·통계·감사, 2차 상품/주문을 관리.
 
 ## 스택
-- React + **Vite (SPA)** + TypeScript, **Feature-Sliced Design**
+- React + **Next.js(App Router)** + TypeScript, **Feature-Sliced Design** (web과 동일 스택 통일)
 - 서버 상태 TanStack Query, 응답 엔벌로프 `{success, data, error}`
 - 권한 **RBAC**(ITF-012: 운영자/관리자), 서버 인가 강제. 모든 변경 액션 **감사 로그** 기록
 

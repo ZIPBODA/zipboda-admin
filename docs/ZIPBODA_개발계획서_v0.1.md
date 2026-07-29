@@ -42,7 +42,7 @@
 
 | 항목 | 결정(권장) | 근거 |
 |------|-----------|------|
-| 프레임워크 | **React + Vite (SPA) + TypeScript** | 관리자=SEO 불필요, 빠른 빌드 |
+| 프레임워크 | **React + Next.js(App Router) + TypeScript** | 전 프론트 스택 통일(React/Next/TS/Tailwind). 관리자는 SEO 불필요라 CSR 위주 |
 | 폴더 구조 | Feature-Sliced Design | frontend-architecture.md |
 | 서버 상태 | TanStack Query(응답 `{success,data,error}`) | — |
 | 권한 | RBAC(ITF-012: 운영자/관리자), 서버 인가 강제 | REQ-AD-015 |
