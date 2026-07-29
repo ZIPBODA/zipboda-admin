@@ -5,7 +5,7 @@
 | 항목 | 내용 |
 |------|------|
 | 문서명 | 집보다(Zipboda) Admin(운영 콘솔) 개발계획서 |
-| 버전 | v1.1.0 |
+| 버전 | v1.2.0 |
 | 작성일 | 2026-07-27 |
 | 기반 문서 | ../zipboda-web/docs/ZIPBODA_요구사항정의서_v0.1.xlsx, ../zipboda-web/docs/ZIPBODA_화면설계서_v0.1.xlsx, ../zipboda-web/docs/ZIPBODA_API 및 인터페이스 정의서_v0.1.xlsx (xlsx 3종은 zipboda-web 대표 관리) |
 
@@ -15,6 +15,7 @@
 |------|------|--------|-----------|
 | v0.1.0 | 2026-07-27 | Claude | 신규 작성 — admin 전용 WBS·Phase·추적 매트릭스 |
 | v1.1.0 | 2026-07-27 | Claude | 검토 반영 — 화면기획 확정 게이트(P0), 신청현황/관리자 CRUD API 갭 해소 반영, 감사로그(REQ-AD-016·ZB-A-SYS-02·API-192) 추가, 통합 로드맵, 확정 스택, 일정·공수·오너·수용 기준 |
+| v1.2.0 | 2026-07-29 | Claude | 파일명 정비 — 개발계획서 파일명 영문화(ZIPBODA_development-plan_v0.1.md), .claude/rules 규칙 파일 .rule.md 접미 통일 및 참조 경로 갱신 |
 
 ---
 
@@ -43,7 +44,7 @@
 | 항목 | 결정(권장) | 근거 |
 |------|-----------|------|
 | 프레임워크 | **React + Next.js(App Router) + TypeScript** | 전 프론트 스택 통일(React/Next/TS/Tailwind). 관리자는 SEO 불필요라 CSR 위주 |
-| 폴더 구조 | Feature-Sliced Design | frontend-architecture.md |
+| 폴더 구조 | Feature-Sliced Design | frontend-architecture.rule.md |
 | 서버 상태 | TanStack Query(응답 `{success,data,error}`) | — |
 | 권한 | RBAC(ITF-012: 운영자/관리자), 서버 인가 강제 | REQ-AD-015 |
 | 감사 | **모든 변경 액션에 감사로그 기록(API-192 조회)** | REQ-AD-016(신규) |
@@ -138,6 +139,6 @@ Brand `#FFBA17` / Neutral `#1A1A1A`~`#F3F4F6` / Semantic·Typography(web과 동�
 | RD4 | 대량 데이터 관리 성능 | 중 | 중 | Med | Admin FE | 목록 지연 | 서버 페이지네이션·필터·인덱스 |
 
 ## 10. 검증 & 검토 반영 이력
-1. Phase 검토 phase-review-rule.md 준수·기록. 2. CI 강제·회귀 누적. 3. 화면ID(ZB-A-*)·API ID가 대표 xlsx와 일치(미존재 0건). 4. A1~A4 준수(실연동 시 목 제거, API 갭 문서 등록). 5. 비기능: 보안(RBAC·감사)·성능·접근성(S7).
+1. Phase 검토 phase-review.rule.md 준수·기록. 2. CI 강제·회귀 누적. 3. 화면ID(ZB-A-*)·API ID가 대표 xlsx와 일치(미존재 0건). 4. A1~A4 준수(실연동 시 목 제거, API 갭 문서 등록). 5. 비기능: 보안(RBAC·감사)·성능·접근성(S7).
 
 **검토 반영:** admin-Critical(화면기획 게이트·신청현황 API 갭 해소)·admin-Major(CRUD API 완성 반영)·admin-Minor(감사로그·자산 일정 정렬)·문서간 Critical(관리자 API 소비 시점 정렬)·C1~C5.
